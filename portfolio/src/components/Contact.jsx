@@ -21,10 +21,10 @@ const Contact = () => {
 
         <div>
           <ul className="list-disc list-inside">
-            <li><strong>Email:</strong> <a href="mailto:mongarerobert3@gmail.com">mongarerobert3@gmail.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/robert-mong-are-553162210/">https://www.linkedin.com/in/robert-mong-are-553162210/</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/mongarerobert3">https://github.com/mongarerobert3</a></li>
-            <li><strong>Twitter:</strong> <a href="https://twitter.com/Nyabz__">https://twitter.com/Nyabz__</a></li>
+            <li><strong>Email:</strong> <a href="mailto:mongarerobert3@gmail.com"><em>mongarerobert3@gmail.com</em></a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/robert-mong-are-553162210/"><em>https://www.linkedin.com/in/robert-mong-are-553162210/</em></a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/mongarerobert3"><em>https://github.com/mongarerobert3</em></a></li>
+            <li><strong>Twitter:</strong> <a href="https://twitter.com/Nyabz__"><em>https://twitter.com/Nyabz__</em></a></li>
           </ul>
         </div>
 
