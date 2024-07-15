@@ -4,9 +4,9 @@ import { navLinks } from "../constants";
 
 const Hero = ({ setScrolled }) => {
   return (
-    <section className='relative w-full h-screen mx-auto flex'>
+    <section className='relative w-full h-screen mx-auto flex '>
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 mt-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -26,7 +26,7 @@ const Hero = ({ setScrolled }) => {
           {navLinks.map((nav) => (
             <motion.div
               key={nav.id}
-              className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+              className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card text-white text-[20px] font-bold text-center'
               whileHover={{ rotate: 2, scale: 1.05 }}
               onClick={() => window.location.href = (nav.id === 'resume' ? "https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true" : `#${nav.id}`)}
             >

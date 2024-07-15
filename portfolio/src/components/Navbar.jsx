@@ -8,20 +8,33 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [smallScreen, setSmallScreen] = useState(window.innerWidth <= 640); 
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      const heroSection = document.getElementById("heroSection");
+      if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        if (scrollTop > 100 && rect.bottom <= 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const handleResize = () => {
+      setSmallScreen(window.innerWidth <= 640); 
+    };
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -33,6 +46,10 @@ const Navbar = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+        {smallScreen && scrolled && (
+          <span className='text-white font-medium'>Robert Mongare</span>
+        )}
+
         <Link
           to='/'
           className='flex items-center gap-2'
@@ -45,7 +62,7 @@ const Navbar = () => {
         </Link>
 
         {scrolled && (
-          <ul className='list-none flex flex-row gap-10'>
+          <ul className='list-none flex-row gap-10 hidden sm:flex'>
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
