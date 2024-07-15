@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
@@ -29,8 +28,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled ? "bg-primary justify-center" : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -42,25 +41,34 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Robert &nbsp;
-            <span className='sm:block hidden'> | Mong'are</span>
-          </p>
+          {/* Add your logo or brand name here */}
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
+        {scrolled && (
+          <ul className='list-none flex flex-row gap-10'>
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                {nav.id === 'resume' ? (
+                  <a
+                    href="https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {nav.title}
+                  </a>
+                ) : (
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
@@ -79,20 +87,29 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                {nav.id === 'resume' ? (
-                  <a href="https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true" target="blank" />
-                ) : (
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                )}
-                  
+                  {nav.id === 'resume' ? (
+                    <a
+                      href="https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='block text-black font-medium p-4'
+                    >
+                      {nav.title}
+                    </a>
+                  ) : (
+                    <a
+                      href={`#${nav.id}`}
+                      className='block text-black font-medium p-4'
+                    >
+                      {nav.title}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
