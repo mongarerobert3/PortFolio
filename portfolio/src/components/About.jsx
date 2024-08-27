@@ -47,8 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Innovative and deadline-driven DevOps Engineer with experience designing and developing user-centered solutions from initial concept to final, polished deliverables. 
-        I am skilled in DevOps methodologies, software programming & automation, Web Development - with a passion for learning new technologies.
+        Innovative DevOps and Full Stack Software Engineer with a proven track record in designing and developing user-centered solutions from initial concept to final polished product. I am skilled in DevOps methodologies, software programming, automation, and web development, and have a strong passion for continuous learning and adapting to new technologies.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
