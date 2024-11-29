@@ -168,7 +168,7 @@ const experiences = [
     company_name: "254 Pixels Marketing",
     icon: pixels,
     iconBg: "#E6DEDD",
-    date: "Jan 2022 - Dec 2023",
+    date: "Jan 2022 - Dec 2023 Remote",
     points: [
       "Contributed to the development of educational systems using various CMS technologies, aimed at creating customized solutions for multiple agencies. Implemented user-friendly interfaces and integrated functionalities tailored to specific educational needs.",
       "Designed and implemented WordPress-based e-commerce platforms for diverse clients, focusing on optimizing performance and scalability. Integrated payment gateways, customized themes, and plugins to deliver seamless shopping experiences.",
