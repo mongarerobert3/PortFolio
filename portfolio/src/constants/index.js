@@ -28,6 +28,7 @@ import {
   azure,
   Kubernetes,
   Google_Cloud,
+  turing
 } from "../assets";
 
 export const navLinks = [
@@ -140,6 +141,16 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "LLM Trainer",
+    company_name: "Turing Enterprises",
+    icon: turing,
+    iconBg: "#383E56",
+    date: "2024, Remote",
+    points: [
+      "Designed innovative and engaging prompts to improve language model performance and adaptability.",
+    ],
+  },
   {
     title: "IT intern ",
     company_name: "Postbank Kenya",

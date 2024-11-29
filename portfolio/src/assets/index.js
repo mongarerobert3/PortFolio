@@ -33,6 +33,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.jpg";
 
+import turing from "./Turing.jpg";
+
 export {
   backend,
   creator,
@@ -65,4 +67,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  turing
 };
