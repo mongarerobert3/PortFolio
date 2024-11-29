@@ -149,6 +149,7 @@ const experiences = [
     date: "2024, Remote",
     points: [
       "Designed innovative and engaging prompts to improve language model performance and adaptability.",
+      "I worked extensively with Reinforcement Learning with Human Feedback (RLHF), analyzing model outputs to identify inaccuracies and refine responses."
     ],
   },
   {
