@@ -28,10 +28,23 @@ const Hero = ({ setScrolled }) => {
               key={nav.id}
               className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card text-white text-[20px] font-bold text-center'
               whileHover={{ rotate: 2, scale: 1.05 }}
-              onClick={() => window.location.href = (nav.id === 'resume' ? "https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true" : `#${nav.id}`)}
+              onClick={() =>
+                window.location.href =
+                  nav.id === 'resume'
+                    ? 'https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true'
+                    : nav.id === 'certificates'
+                    ? 'https://drive.google.com/drive/folders/1a24Kx-AfrhgoKpyCrU858dlxg5JyIlJV?usp=sharing'
+                    : `#${nav.id}`
+              }
             >
               <a
-                href={nav.id === 'resume' ? "https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true" : `#${nav.id}`}
+                href={
+                  nav.id === 'resume'
+                    ? 'https://docs.google.com/document/d/1ea8a87A0YUunKEH5PcSqNYv_KRnEiMb8/edit?usp=sharing&amp;ouid=106085705588624337979&amp;rtpof=true&amp;sd=true'
+                    : nav.id === 'certificates'
+                    ? 'https://drive.google.com/drive/folders/1a24Kx-AfrhgoKpyCrU858dlxg5JyIlJV?usp=sharing'
+                    : `#${nav.id}`
+                }
                 className='block text-black font-medium p-4'
               >
                 {nav.title}
