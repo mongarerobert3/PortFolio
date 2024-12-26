@@ -157,7 +157,7 @@ const experiences = [
     ],
   },
   {
-    title: "IT intern ",
+    title: "IT intern",
     company_name: "Postbank Kenya",
     icon: postbank,
     iconBg: "#383E56",
@@ -172,7 +172,7 @@ const experiences = [
     company_name: "254 Pixels Marketing",
     icon: pixels,
     iconBg: "#E6DEDD",
-    date: "Jan 2022 - Dec 2023 Remote",
+    date: "Jan 2022 - Dec 2023, Remote",
     points: [
       "Contributed to the development of educational systems using various CMS technologies, aimed at creating customized solutions for multiple agencies. Implemented user-friendly interfaces and integrated functionalities tailored to specific educational needs.",
       "Designed and implemented WordPress-based e-commerce platforms for diverse clients, focusing on optimizing performance and scalability. Integrated payment gateways, customized themes, and plugins to deliver seamless shopping experiences.",
@@ -180,7 +180,7 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "freelance",
+    company_name: "Client referrals",
     icon: web,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
