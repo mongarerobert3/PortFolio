@@ -194,6 +194,27 @@ const experiences = [
 
 const projects = [
   {
+    name: "Solana blockchain Wallet Analyzer",
+    description:
+      "An automated bot that analyzes a list of wallets and provides detailed insights into each wallet's activity, including the number of transactions, total balance, and recent transactions. Its goal is to calculate the PNL and win rate of a wallet to assess its suitability for copy trading.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Solana blockchain",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dms,
+    source_code_link: "https://github.com/mongarerobert3/Analyzer-program.git",
+  },
+  {
     name: "Tours n Travel",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
@@ -233,27 +254,6 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Dairy Management system",
-    description:
-      "The Dairy Management System project streamlines farm operations through automated data collection, analysis, and reporting.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: dms,
     source_code_link: "https://github.com/",
   },
   {

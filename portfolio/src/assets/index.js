@@ -5,7 +5,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import dms from "./dms.png";
+import dms from "./dms.jpg";
 
 import aws from "./tech/aws.png";
 import docker from "./tech/docker.png";
